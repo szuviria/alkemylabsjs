@@ -14,4 +14,4 @@ Open [http://localhost:3001/api/user](http://localhost:3001/user) to view json u
 
 ### `Test App on Heroku`
 
-`https://balanceapp-js.herokuapp.com/`
+[`https://balanceapp-js.herokuapp.com/`](https://balanceapp-js.herokuapp.com)

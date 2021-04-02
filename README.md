@@ -6,4 +6,4 @@ _You can edit or delete your operations too._
 
 ### `Test App on Heroku`
 
-`https://balanceapp-js.herokuapp.com/`
+[`https://balanceapp-js.herokuapp.com/`](https://balanceapp-js.herokuapp.com)
