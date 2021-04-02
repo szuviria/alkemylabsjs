@@ -9,6 +9,7 @@ const usersRouter = require('./controllers/users')
 const loginRouter = require('./controllers/login')
 const logger = require('./utils/logger')
 const middleware = require('./utils/middleware')
+const path = require('path')
 
 
 logger.info('connecting to', config.MONGODB_URI)
@@ -31,6 +32,14 @@ app.use(middleware.tokenExtractor)
 app.use('/api/login', loginRouter)
 app.use('/api/operations', operationsRouter)
 app.use('/api/users', usersRouter)
+
+app.get('/*', (req, res) => {
+  console.log(path)
+  let url = path.join(__dirname, '/', 'build', 'index.html');
+  if (!url.startsWith('/app/')) // we're on local windows
+    url = url.substring(1);
+  res.sendFile(url);
+});
 
 app.use(middleware.unknownEndpoint)
 app.use(middleware.errorHandler)
