@@ -34,7 +34,6 @@ app.use('/api/operations', operationsRouter)
 app.use('/api/users', usersRouter)
 
 app.get('/*', (req, res) => {
-  console.log(path)
   let url = path.join(__dirname, '/', 'build', 'index.html');
   if (!url.startsWith('/app/')) // we're on local windows
     url = url.substring(1);
