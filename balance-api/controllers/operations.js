@@ -43,7 +43,7 @@ operationsRouter.delete('/:id', async (request, response, next) => {
   console.log(operation)
     
   const decodedToken = jwt.verify(request.token, process.env.SECRET)
-  response.status(204).end()
+  // response.status(204).end()
     
   if(!operation) {
     return response.status(400).json({ error: 'blog not exist in the server' })
